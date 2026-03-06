@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Osman Karakoç</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet (SATELLITE) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div class="brandText">
+        <div class="brandName">Dr. Osman Karakoç</div>
+        <div class="brandMeta">Harita Yüksek Mühendisi · Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="navLink active" href="index.html">Hakkımda</a>
+      <a class="navLink" href="yayinlar.html">Yayınlar</a>
+      <a class="navLink" href="iletisim.html">İletişim</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="heroLeft">
+        <h1 class="heroTitle">Dr. Osman Karakoç</h1>
+        <div class="heroSub">
+          <div class="pill">Harita Yüksek Mühendisi</div>
+          <div class="pill">Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</div>
+          <div class="pill">Remote Sensing · Geospatial Analysis</div></div>
+
+        <p class="heroText">
+          Uzaktan Algılama ve uydu teknolojileri alanındaki yenilikleri yakından takip eden bir araştırmacıdır. Çalışmaları, küresel çevresel sorunların uzaktan algılama ve coğrafi bilgi sistemleri entegrasyonu ile mekânsal olarak analiz edilmesine odaklanmaktadır. Bilimsel bilginin dönüştürücü gücüne inanarak araştırmalarını bu doğrultuda sürdürmektedir.
+        </p>
+
+        <div class="heroActions">
+          <a class="btn" href="iletisim.html">İletişime Git</a>
+          <a class="btn ghost" href="yayinlar.html">Yayınlar</a>
+        </div>
+        <div class="miniMapShell globeShell heroGlobeShell">
+            <div class="globeWrap">
+            <canvas id="globeCanvas" aria-label="Rotating world globe"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="sectionHead">
+        <h2>Uzmanlık Alanları</h2>
+      </div>
+      <div class="tags">
+        <span>Uzaktan Algılama</span>
+        <span>Derin Öğrenme</span>
+        <span>Coğrafi Bilgi Sistemleri</span>
+        <span>Mekânsal Veri Modelleme</span>
+        <span>Fotogrametri</span>
+        <span>Kadastro ve Mülkiyet Planlama</span>
+        <span>GIS-Based Modelling</span>
+        <span>Advanced Spatial Data Analysis</span>
+        <span>Machine Learning</span>
+        <span>Deep Learning</span>
+        <span>Spatial Modeling</span>
+      </div>
+    </section>
+
+    <section class="grid2">
+      <section class="card">
+        <div class="sectionHead">
+          <h2>Deneyim</h2>
+          <div class="sectionHint">Zaman çizelgesi</div>
+        </div>
+
+        <div class="timeline" id="timelineExperience">
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Çevre, Şehircilik ve İklim Değişikliği İl Müdürlüğü · Çankırı</div>
+                <div class="tTime">2017 –</div>
+              </div>
+              <div class="tRole">İmar ve Planlama Şube Müdürlüğü · Harita Yüksek Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Çankırı Çerkeş Belediye Başkanlığı · Çankırı</div>
+                <div class="tTime">2016 – 2017</div>
+              </div>
+              <div class="tRole">Fen ve İmar İşleri Müdürlüğü · Harita Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Şah-Kar Harita İnş. Taah. Ltd. Şti. · Zonguldak</div>
+                <div class="tTime">2013 – 2014</div>
+              </div>
+              <div class="tRole">Zonguldak/Alaplı 11 Birime Ait Tesis Kadastrosu Uygulama Projesi · Harita Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Ostem Harita İnş. Ltd. Şti. · Çankırı</div>
+                <div class="tTime">2012 – 2013</div>
+              </div>
+              <div class="tRole">Çankırı/Ilgaz 10 birime ait 22/A (Kadastro Yenilemesi) Uygulama Projesi · Harita Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Geozemin Temel Mühendisliği İnş. Taah. Ltd. Şti. · İstanbul</div>
+                <div class="tTime">2011 – 2012</div>
+              </div>
+              <div class="tRole">Kağıthane Köprülü Viyadük Yapım Projesi · Harita Mühendisi</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="sectionHead">
+          <h2>Eğitim</h2>
+          <div class="sectionHint">Zaman çizelgesi</div>
+        </div>
+
+        <div class="timeline" id="timelineEducation">
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Necmettin Erbakan Üniversitesi</div>
+                <div class="tTime">2023 – 2026</div>
+              </div>
+              <div class="tRole">Harita Mühendisliği · Doktora</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Necmettin Erbakan Üniversitesi</div>
+                <div class="tTime">2020 – 2022</div>
+              </div>
+              <div class="tRole">Harita Mühendisliği · Yüksek Lisans</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Bülent Ecevit Üniversitesi</div>
+                <div class="tTime">2008 – 2013</div>
+              </div>
+              <div class="tRole">Harita Mühendisliği · Lisans</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="softTitle">Kullanılan Yazılımlar</h2>
+        <ul class="softList">
+          <li><b>CAD:</b> Netcad, AutoCAD, Belsiscad</li>
+          <li><b>GIS:</b> QGIS, ArcGIS, Global Mapper</li>
+          <li><b>Uzaktan Algılama:</b> ERDAS, ENVI</li>
+          <li><b>İstatistik:</b> SPSS</li>
+          <li><b>Proje Yönetimi:</b> MS Office</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="card mapsSection">
+      <div class="mapsGrid">
+        <div class="miniMapShell mapPanel mapPanel--premium reveal">
+          <div class="miniMapHeader">
+            <div class="miniMapTitle">SATELLITE</div>
+          </div>
+          <div id="satMap" class="map map--premium" aria-label="Uydu haritası"></div>
+          <div class="mapControls" data-map="satMap">
+            <button class="mapCtrlBtn" data-action="layer" type="button">Katman</button>
+            <button class="mapCtrlBtn" data-action="reset" type="button">Sıfırla</button>
+            <button class="mapCtrlBtn" data-action="fullscreen" type="button">Tam Ekran</button>
+          </div>
+          <div class="mapCoords" data-coords="satMap">—</div>
+          <div class="miniMapFooter">
+            <span class="kbd">Sürükle</span>
+            <span class="kbd">+ / −</span>
+            <span class="kbd">Katman</span>
+          </div>
+        </div>
+
+        <div class="miniMapShell mapPanel mapPanel--premium reveal">
+          <div class="miniMapHeader">
+            <div class="miniMapTitle">OPENSTREET MAP</div>
+          </div>
+          <div id="osmMap" class="map map--premium" aria-label="OpenStreetMap"></div>
+          <div class="mapControls" data-map="osmMap">
+            <button class="mapCtrlBtn" data-action="layer" type="button">Katman</button>
+            <button class="mapCtrlBtn" data-action="reset" type="button">Sıfırla</button>
+            <button class="mapCtrlBtn" data-action="fullscreen" type="button">Tam Ekran</button>
+          </div>
+          <div class="mapCoords" data-coords="osmMap">—</div>
+          <div class="miniMapFooter">
+            <span class="kbd">Sürükle</span>
+            <span class="kbd">+ / −</span>
+            <span class="kbd">Katman</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footerInner">
+      <span>© <span id="year"></span> Dr. Osman Karakoç</span>
+</div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
