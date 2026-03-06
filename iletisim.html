@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim · Dr. Osman Karakoç</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+
+<body id="top">
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div class="brandText">
+        <div class="brandName">Dr. Osman Karakoç</div>
+        <div class="brandMeta">Harita Yüksek Mühendisi · Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</div>
+      </div>
+    </div>
+
+    
+    <nav class="nav">
+      <a class="navLink" href="index.html">Ana Sayfa</a>
+      <a class="navLink" href="yayinlar.html">Yayınlar</a>
+      <a class="navLink active" href="iletisim.html">İletişim</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 class="pageTitle">İletişim</h1>
+      <p class="pageLead">Dilediğiniz zaman e‑posta üzerinden iletişime geçebilirsiniz.</p>
+
+      <div class="contactGrid">
+        <div class="contactCard">
+          <div class="contactLabel">Kurumsal</div>
+          <a class="contactLink" href="mailto:osman.karakoc@csb.gov.tr">osman.karakoc@csb.gov.tr</a>
+        </div>
+        <div class="contactCard">
+          <div class="contactLabel">Kişisel</div>
+          <a class="contactLink" href="mailto:osmankarakoc18@gmail.com">osmankarakoc18@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="mapShell">
+        <div class="mapHeader">
+          <div class="mapTitle">Konum</div>
+          <div class="mapHint">Çankırı · Türkiye</div>
+        </div>
+        <div id="contactMap" class="map" aria-label="Çankırı haritası"></div>
+          <div class="mapControls" data-map="contactMap">
+            <button class="mapCtrlBtn" data-action="layer" type="button">Katman</button>
+            <button class="mapCtrlBtn" data-action="reset" type="button">Sıfırla</button>
+            <button class="mapCtrlBtn" data-action="fullscreen" type="button">Tam Ekran</button>
+          </div>
+          <div class="mapCoords" data-coords="contactMap">—</div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer siteFooter">
+    <div class="footerInner">
+      <div class="footerBrandCol">
+        <a class="footerBrand" href="index.html" aria-label="Dr. Osman Karakoç ana sayfa">
+          <span class="footerMonogram">OK</span>
+          <div class="footerBrandText">
+            <strong>Dr. Osman Karakoç</strong>
+            <span>Harita Yüksek Mühendisi · Remote Sensing · Geospatial Analysis</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="footerQuickCol">
+        <div class="footerTitle">Hızlı Erişim</div>
+        <div class="footerQuickLinks">
+          <a class="footerMiniBtn" href="index.html">Hakkımda</a>
+          <a class="footerMiniBtn" href="yayinlar.html">Yayınlar</a>
+          <a class="footerMiniBtn" href="iletisim.html">İletişim</a>
+        </div>
+      </div>
+
+      <div class="footerSocialCol">
+        <div class="footerTitle">Akademik ve Sosyal Ağlar</div>
+        <div class="footerSocialGrid">
+          <a class="footerSocialCard linkedin" href="https://www.linkedin.com/in/drosmankarakoc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profilini aç">
+            <span class="footerIcon">in</span>
+            <span class="footerLabel">LinkedIn</span>
+          </a>
+          <a class="footerSocialCard instagram" href="https://www.instagram.com/dr.osmankarakoc?igsh=MWY2bWR6Z3JieG5ocw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram profilini aç">
+            <span class="footerIcon">◎</span>
+            <span class="footerLabel">Instagram</span>
+          </a>
+          <a class="footerSocialCard dergipark" href="https://dergipark.org.tr/tr/pub/@dr.osmankarakoc" target="_blank" rel="noopener noreferrer" aria-label="DergiPark profilini aç">
+            <span class="footerIcon">DP</span>
+            <span class="footerLabel">DergiPark</span>
+          </a>
+          <a class="footerSocialCard researchgate" href="https://www.researchgate.net/profile/Osman-Karakoc-3?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate profilini aç">
+            <span class="footerIcon">RG</span>
+            <span class="footerLabel">ResearchGate</span>
+          </a>
+          <a class="footerSocialCard academia" href="https://erbakan.academia.edu/KARAKO%C3%87" target="_blank" rel="noopener noreferrer" aria-label="Academia profilini aç">
+            <span class="footerIcon">A</span>
+            <span class="footerLabel">Academia</span>
+          </a>
+          <a class="footerSocialCard scholar" href="https://scholar.google.com/citations?user=3cy9_QQAAAAJ&hl=tr" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profilini aç">
+            <span class="footerIcon">GS</span>
+            <span class="footerLabel">Google Scholar</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footerContactCol">
+        <div class="footerTitle">İletişim</div>
+        <div class="footerContactLinks">
+          <a class="footerMiniBtn" href="mailto:osman.karakoc@csb.gov.tr">Kurumsal E‑Posta</a>
+          <a class="footerMiniBtn" href="mailto:osmankarakoc18@gmail.com">Kişisel E‑Posta</a>
+          <a class="footerMiniBtn" href="https://drosmankarakoc.com" target="_blank" rel="noopener noreferrer">Resmî Web Sitesi</a>
+        </div>
+      </div>
+
+      <div class="footerTopCol">
+        <a class="scrollTopBtn" href="#top" data-scroll-top onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" aria-label="Sayfanın üstüne dön">↑ Yukarı Dön</a>
+      </div>
+    </div>
+
+    <div class="footerBottomLine">
+      <span>© <span id="year"></span> Dr. Osman Karakoç</span>
+      <a href="https://drosmankarakoc.com" target="_blank" rel="noopener noreferrer">drosmankarakoc.com</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

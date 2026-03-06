@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Osman Karakoç</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet (SATELLITE) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+
+<body id="top">
+  <header class="navbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div class="brandText">
+        <div class="brandName">Dr. Osman Karakoç</div>
+        <div class="brandMeta">Harita Yüksek Mühendisi · Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</div>
+      </div>
+    </div>
+
+    
+    <nav class="nav">
+      <a class="navLink active" href="index.html">Ana Sayfa</a>
+      <a class="navLink" href="yayinlar.html">Yayınlar</a>
+      <a class="navLink" href="iletisim.html">İletişim</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card heroShowcase">
+      <div class="heroMediaCol">
+        <div class="heroPortraitWrap">
+          <div class="heroPortraitGlow"></div>
+          <img class="heroPortrait" src="profile.jpg" alt="Dr. Osman Karakoç">
+        </div>
+      </div>
+
+      <div class="heroLeft heroTextCol">
+        <div class="heroEyebrow">Remote Sensing · GIS · Geospatial Analysis</div>
+        <h1 class="heroTitle">Dr. Osman Karakoç</h1>
+        <div class="heroSub">
+          <div class="pill">Harita Yüksek Mühendisi</div>
+          <div class="pill">Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</div>
+          <div class="pill">Remote Sensing · Geospatial Analysis</div>
+        </div>
+
+        <p class="heroText">
+          Uzaktan algılama, coğrafi bilgi sistemleri ve mekânsal veri analizi alanlarında çalışmalar yürütmektedir. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı bünyesinde görev yapmakta olup, araştırmaları uydu verileri, mekânsal analiz yöntemleri ile makine ve derin öğrenme teknikleri kullanılarak mekânsal süreçlerin izlenmesi ve mekânsal modelleme konularına odaklanmaktadır.
+        </p>
+
+        <div class="heroActions">
+          <a class="btn" href="iletisim.html">İletişime Git</a>
+          <a class="btn ghost" href="yayinlar.html">Yayınlar</a>
+        </div>
+      </div>
+
+      <div class="miniMapShell globeShell heroGlobeShell">
+        <div class="globeWrap">
+          <canvas id="globeCanvas" aria-label="Rotating world globe"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="sectionHead">
+        <h2>Uzmanlık Alanları</h2>
+      </div>
+      <div class="tags">
+        <span>Uzaktan Algılama</span>
+        <span>Derin Öğrenme</span>
+        <span>Coğrafi Bilgi Sistemleri</span>
+        <span>Mekânsal Veri Modelleme</span>
+        <span>Fotogrametri</span>
+        <span>Kadastro ve Mülkiyet Planlama</span>
+        <span>GIS-Based Modelling</span>
+        <span>Advanced Spatial Data Analysis</span>
+        <span>Machine Learning</span>
+        <span>Deep Learning</span>
+        <span>Spatial Modeling</span>
+      </div>
+    </section>
+
+    <section class="grid2">
+      <section class="card">
+        <div class="sectionHead">
+          <h2>Deneyim</h2>
+          <div class="sectionHint">Zaman çizelgesi</div>
+        </div>
+
+        <div class="timeline" id="timelineExperience">
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Çevre, Şehircilik ve İklim Değişikliği İl Müdürlüğü · Çankırı</div>
+                <div class="tTime">2017 –</div>
+              </div>
+              <div class="tRole">İmar ve Planlama Şube Müdürlüğü · Harita Yüksek Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Çankırı Çerkeş Belediye Başkanlığı · Çankırı</div>
+                <div class="tTime">2016 – 2017</div>
+              </div>
+              <div class="tRole">Fen ve İmar İşleri Müdürlüğü · Harita Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Şah-Kar Harita İnş. Taah. Ltd. Şti. · Zonguldak</div>
+                <div class="tTime">2013 – 2014</div>
+              </div>
+              <div class="tRole">Zonguldak/Alaplı 11 Birime Ait Tesis Kadastrosu Uygulama Projesi · Harita Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Ostem Harita İnş. Ltd. Şti. · Çankırı</div>
+                <div class="tTime">2012 – 2013</div>
+              </div>
+              <div class="tRole">Çankırı/Ilgaz 10 birime ait 22/A (Kadastro Yenilemesi) Uygulama Projesi · Harita Mühendisi</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Geozemin Temel Mühendisliği İnş. Taah. Ltd. Şti. · İstanbul</div>
+                <div class="tTime">2011 – 2012</div>
+              </div>
+              <div class="tRole">Kağıthane Köprülü Viyadük Yapım Projesi · Harita Mühendisi</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="sectionHead">
+          <h2>Eğitim</h2>
+          <div class="sectionHint">Zaman çizelgesi</div>
+        </div>
+
+        <div class="timeline" id="timelineEducation">
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Necmettin Erbakan Üniversitesi</div>
+                <div class="tTime">2023 – 2026</div>
+              </div>
+              <div class="tRole">Harita Mühendisliği · Doktora</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Necmettin Erbakan Üniversitesi</div>
+                <div class="tTime">2020 – 2022</div>
+              </div>
+              <div class="tRole">Harita Mühendisliği · Yüksek Lisans</div>
+            </div>
+          </div>
+
+          <div class="tItem reveal">
+            <div class="tDot"></div>
+            <div class="tContent">
+              <div class="tTop">
+                <div class="tTitle">Bülent Ecevit Üniversitesi</div>
+                <div class="tTime">2008 – 2013</div>
+              </div>
+              <div class="tRole">Harita Mühendisliği · Lisans</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="softTitle">Kullanılan Yazılımlar</h2>
+        <ul class="softList">
+          <li><b>CAD:</b> Netcad, AutoCAD, Belsiscad</li>
+          <li><b>GIS:</b> QGIS, ArcGIS, Global Mapper</li>
+          <li><b>Uzaktan Algılama:</b> ERDAS, ENVI</li>
+          <li><b>İstatistik:</b> SPSS</li>
+          <li><b>Proje Yönetimi:</b> MS Office</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="card mapsSection">
+      <div class="mapsGrid">
+        <div class="miniMapShell mapPanel mapPanel--premium reveal">
+          <div class="miniMapHeader">
+            <div class="miniMapTitle">SATELLITE</div>
+          </div>
+          <div id="satMap" class="map map--premium" aria-label="Uydu haritası"></div>
+          <div class="mapControls" data-map="satMap">
+            <button class="mapCtrlBtn" data-action="layer" type="button">Katman</button>
+            <button class="mapCtrlBtn" data-action="reset" type="button">Sıfırla</button>
+            <button class="mapCtrlBtn" data-action="fullscreen" type="button">Tam Ekran</button>
+          </div>
+          <div class="mapCoords" data-coords="satMap">—</div>
+          <div class="miniMapFooter">
+            <span class="kbd">Sürükle</span>
+            <span class="kbd">+ / −</span>
+            <span class="kbd">Katman</span>
+          </div>
+        </div>
+
+        <div class="miniMapShell mapPanel mapPanel--premium reveal">
+          <div class="miniMapHeader">
+            <div class="miniMapTitle">OPENSTREET MAP</div>
+          </div>
+          <div id="osmMap" class="map map--premium" aria-label="OpenStreetMap"></div>
+          <div class="mapControls" data-map="osmMap">
+            <button class="mapCtrlBtn" data-action="layer" type="button">Katman</button>
+            <button class="mapCtrlBtn" data-action="reset" type="button">Sıfırla</button>
+            <button class="mapCtrlBtn" data-action="fullscreen" type="button">Tam Ekran</button>
+          </div>
+          <div class="mapCoords" data-coords="osmMap">—</div>
+          <div class="miniMapFooter">
+            <span class="kbd">Sürükle</span>
+            <span class="kbd">+ / −</span>
+            <span class="kbd">Katman</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer siteFooter">
+    <div class="footerInner">
+      <div class="footerBrandCol">
+        <a class="footerBrand" href="index.html" aria-label="Dr. Osman Karakoç ana sayfa">
+          <span class="footerMonogram">OK</span>
+          <div class="footerBrandText">
+            <strong>Dr. Osman Karakoç</strong>
+            <span>Harita Yüksek Mühendisi · Remote Sensing · Geospatial Analysis</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="footerQuickCol">
+        <div class="footerTitle">Hızlı Erişim</div>
+        <div class="footerQuickLinks">
+          <a class="footerMiniBtn" href="index.html">Hakkımda</a>
+          <a class="footerMiniBtn" href="yayinlar.html">Yayınlar</a>
+          <a class="footerMiniBtn" href="iletisim.html">İletişim</a>
+        </div>
+      </div>
+
+      <div class="footerSocialCol">
+        <div class="footerTitle">Akademik ve Sosyal Ağlar</div>
+        <div class="footerSocialGrid">
+          <a class="footerSocialCard linkedin" href="https://www.linkedin.com/in/drosmankarakoc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profilini aç">
+            <span class="footerIcon">in</span>
+            <span class="footerLabel">LinkedIn</span>
+          </a>
+          <a class="footerSocialCard instagram" href="https://www.instagram.com/dr.osmankarakoc?igsh=MWY2bWR6Z3JieG5ocw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram profilini aç">
+            <span class="footerIcon">◎</span>
+            <span class="footerLabel">Instagram</span>
+          </a>
+          <a class="footerSocialCard dergipark" href="https://dergipark.org.tr/tr/pub/@dr.osmankarakoc" target="_blank" rel="noopener noreferrer" aria-label="DergiPark profilini aç">
+            <span class="footerIcon">DP</span>
+            <span class="footerLabel">DergiPark</span>
+          </a>
+          <a class="footerSocialCard researchgate" href="https://www.researchgate.net/profile/Osman-Karakoc-3?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate profilini aç">
+            <span class="footerIcon">RG</span>
+            <span class="footerLabel">ResearchGate</span>
+          </a>
+          <a class="footerSocialCard academia" href="https://erbakan.academia.edu/KARAKO%C3%87" target="_blank" rel="noopener noreferrer" aria-label="Academia profilini aç">
+            <span class="footerIcon">A</span>
+            <span class="footerLabel">Academia</span>
+          </a>
+          <a class="footerSocialCard scholar" href="https://scholar.google.com/citations?user=3cy9_QQAAAAJ&hl=tr" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profilini aç">
+            <span class="footerIcon">GS</span>
+            <span class="footerLabel">Google Scholar</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footerContactCol">
+        <div class="footerTitle">İletişim</div>
+        <div class="footerContactLinks">
+          <a class="footerMiniBtn" href="mailto:osman.karakoc@csb.gov.tr">Kurumsal E‑Posta</a>
+          <a class="footerMiniBtn" href="mailto:osmankarakoc18@gmail.com">Kişisel E‑Posta</a>
+          <a class="footerMiniBtn" href="https://drosmankarakoc.com" target="_blank" rel="noopener noreferrer">Resmî Web Sitesi</a>
+        </div>
+      </div>
+
+      <div class="footerTopCol">
+        <a class="scrollTopBtn" href="#top" data-scroll-top onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" aria-label="Sayfanın üstüne dön">↑ Yukarı Dön</a>
+      </div>
+    </div>
+
+    <div class="footerBottomLine">
+      <span>© <span id="year"></span> Dr. Osman Karakoç</span>
+      <a href="https://drosmankarakoc.com" target="_blank" rel="noopener noreferrer">drosmankarakoc.com</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
